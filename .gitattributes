@@ -1,0 +1,4 @@
+* text=auto
+
+# According to the documentation, this ensures that all files that Git considers to be text will have normalized (LF) line endings in the repository.
+# https://git-scm.com/docs/gitattributes#_end_of_line_conversion
