@@ -1,11 +1,18 @@
 import capitalize from '../capitalize.js'
 
+
+
 describe('Capitalize function test 1,', () => {
 
   it('TESTSTRING should be Teststring', () => {
     const result = capitalize('TESTSTRING')
     console.log('capitalize(TESTSTRING) result: ', result)
-    expect(result).toBe('Teststring')
+    expect(result)
+    .toHaveLength(10)
+    .toBe('Teststring')
+    .toEqual('Teststring')
+    
+    
 
   })
 
