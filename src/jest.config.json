@@ -1,6 +1,6 @@
-{
-
-"setupFilesAfterEnv": ["jest-chain"]
-
+ {
+  "setupFilesAfterEnv": ["./testSetup.js"]
 }
-  
+
+ 
+

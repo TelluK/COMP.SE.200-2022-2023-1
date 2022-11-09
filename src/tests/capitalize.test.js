@@ -11,8 +11,7 @@ describe('Capitalize function test 1,', () => {
     .toHaveLength(10)
     .toBe('Teststring')
     .toEqual('Teststring')
-    
-    
+    expect.not.toBeEmpty()
 
   })
 
