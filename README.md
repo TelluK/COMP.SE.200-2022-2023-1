@@ -1,11 +1,13 @@
-# Student template
+# Software Testing course assignment
 
-## Purpose of this repository
+[![Coverage Status](https://coveralls.io/repos/github/TelluK/COMP.SE.200-2022-2023-1/badge.svg?branch=main)](https://coveralls.io/github/TelluK/COMP.SE.200-2022-2023-1?branch=main)
 
-This is a project template for students participating in Software Testing course
-at Tampere University.
 
-The repository only contains the source code that is under testing, `package.json` skeleton
+## Assignment - Part 2 - Executing tests
+
+The assigment is done for Software Testing course at Tampere University.
+
+The repository contains the source code that is under testing, tests, `package.json`
 and LICENSE file.
 
 Source code folder contains a separate license file that must **NOT** be removed under any circumstances!
