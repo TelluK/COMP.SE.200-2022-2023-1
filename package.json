@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --config=./src/jest.config.json"
+    "test": "jest --config=./src/jest.config.json",
+    "verbose": "jest --config=./src/jest.config.json --verbose",
+    "coverage": "jest --config=./src/jest.config.json --coverage"
   },
   "author": "",
   "license": "MIT",
