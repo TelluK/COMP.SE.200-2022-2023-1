@@ -1,51 +1,120 @@
 import capitalize from '../capitalize.js'
 
 
-
 describe('Capitalize function test 1,', () => {
 
-  it('TESTSTRING should be Teststring', () => {
-    const result = capitalize('TESTSTRING')
-    console.log('capitalize(TESTSTRING) result: ', result)
+  const WORD_1 = "POTATO";
+  it(`${WORD_1} should be Potato`, () => {
+    const result = capitalize(WORD_1)
+    const length = WORD_1.length;
+    console.log(`capitalize(${WORD_1}), result: `, result)
     expect(result)
-    .toHaveLength(10)
-    .toBe('Teststring')
-    .toEqual('Teststring')
-    expect.not.toBeEmpty()
+    .toBe('Potato')
+    .toHaveLength(length)
+    .not.toBeEmpty()
+    .not.toBeNull()
 
   })
 
-})
+  const WORD_2 = "cArRoT";
+  it(`${WORD_2} should be Carrot`, () => {
+    const result = capitalize(WORD_2)
+    const length = WORD_2.length;
+    console.log(`capitalize(${WORD_2}), result: `, result)
+    expect(result)
+    .toBe('Carrot')
+    .toHaveLength(length)
+    .not.toBeEmpty()
+    .not.toBeNull()
 
-describe('Capitalize function test 2,', () => {
-
-    it('tEST_sTRING should be Test_string', () => {
-      const result = capitalize('tEST_sTRING')
-      console.log('capitalize(tEST_sTRING) result: ', result)
-      expect(result).toBe('Test_string')
-  
-    })
-  
   })
+  const WORD_3 = "onions and cucumbers";
+  it(`${WORD_3} should be Onions and cucumbers`, () => {
+    const result = capitalize(WORD_3)
+    const length = WORD_3.length;
+    console.log(`capitalize(${WORD_3}), result: `, result)
+    expect(result)
+    .toBe('Onions and cucumbers')
+    .toHaveLength(length)
+    .not.toBeEmpty()
+    .not.toBeNull()
 
-  describe('Capitalize function test 3,', () => {
-
-    it('Test_String should be Test_string', () => {
-      const result = capitalize('Test_String')
-      console.log('capitalize(Test_String) result: ', result)
-      expect(result).toBe('Test_string')
-  
-    })
-  
   })
-
-  describe('Capitalize function test 4,', () => {
-
-    it('åS®¸∂¸¸® should be Test_string', () => {
-      const result = capitalize('åS®¸∂¸¸®')
-      console.log('capitalize(åS®¸∂¸¸®) result:', result)
+    const WORD_4 = "åS®¸∂¸¸®"
+    it(`${WORD_4} should be Ås®¸∂¸¸®`, () => {
+      const result = capitalize(WORD_4)
+      const length = WORD_4.length;
+      console.log(`capitalize(${WORD_4}), result: `, result)
       expect(result).toBe('Ås®¸∂¸¸®')
+      .toHaveLength(length)
+      .not.toBeEmpty()
+      .not.toBeNull()
   
     })
   
   })
+
+  describe('Capitalize function undefined test,', () => {
+
+    let WORD_1;
+    it(`${WORD_1} should be (undefined)`, () => {
+      const result = capitalize(WORD_1)
+      console.log(`capitalize(${WORD_1}), result: `, result)
+      expect(result)
+      .toBe("")
+  
+    })
+
+  })
+
+  describe('Capitalize function null test,', () => {
+
+    let WORD_1 = null;
+    it(`${WORD_1} should be null`, () => {
+      const result = capitalize(WORD_1)
+      console.log(`capitalize(${WORD_1}), result: `, result)
+      expect(result)
+
+      .not.toBeString();
+    
+    })
+
+  })
+
+  describe('Capitalize function integer test,', () => {
+
+    const WORD_1 = 999;
+    it(`${WORD_1} should be 999`, () => {
+      const result = capitalize(WORD_1)
+      console.log(`capitalize(${WORD_1}), result: `, result)
+      expect(result)
+      .toBe("999")
+  
+    })
+
+  })
+
+  describe('Capitalize function array test,', () => {
+
+    const WORD_1 = ["potato", "Carrot", "milk"];
+    it(`${WORD_1} should be Potato,carrot,milk`, () => {
+      const result = capitalize(WORD_1)
+      console.log(`capitalize(${WORD_1}), result: `, result)
+      expect(result)
+      .toBe("Potato,carrot,milk")
+  
+    })
+
+    const WORD_2 = [];
+    it(`${WORD_2} should be ""`, () => {
+      const result = capitalize(WORD_2)
+      console.log(`capitalize(${WORD_2}), result: `, result)
+      expect(result)
+      .toBeEmpty()
+      .toHaveLength(0);
+  
+    })
+
+  })
+
+  
