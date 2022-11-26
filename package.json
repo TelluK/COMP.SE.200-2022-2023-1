@@ -7,7 +7,9 @@
   "scripts": {
     "test": "jest --config=./src/jest.config.json",
     "verbose": "jest --config=./src/jest.config.json --verbose",
-    "coverage": "jest --config=./src/jest.config.json --coverage"
+    "coverage": "jest --config=./src/jest.config.json --coverage",
+    "watch": "jest --config=./src/jest.config.json --watch",
+    "watchAll": "jest --config=./src/jest.config.json --watchAll"
   },
   "author": "",
   "license": "MIT",
