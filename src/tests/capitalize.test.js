@@ -54,32 +54,32 @@ describe('Capitalize function test 1,', () => {
   
   })
 
-  describe('Capitalize function undefined test,', () => {
+  // describe('Capitalize function undefined test,', () => {
 
-    let WORD_1;
-    it(`${WORD_1} should be (undefined)`, () => {
-      const result = capitalize(WORD_1)
-      console.log(`capitalize(${WORD_1}), result: `, result)
-      expect(result)
-      .toBe("")
+  //   let WORD_1;
+  //   it(`${WORD_1} should be (undefined)`, () => {
+  //     const result = capitalize(WORD_1)
+  //     console.log(`capitalize(${WORD_1}), result: `, result)
+  //     expect(result)
+  //     .toBe("")
   
-    })
+  //   })
 
-  })
+  // })
 
-  describe('Capitalize function null test,', () => {
+  // describe('Capitalize function null test,', () => {
 
-    let WORD_1 = null;
-    it(`${WORD_1} should be null`, () => {
-      const result = capitalize(WORD_1)
-      console.log(`capitalize(${WORD_1}), result: `, result)
-      expect(result)
+  //   let WORD_1 = null;
+  //   it(`${WORD_1} should be null`, () => {
+  //     const result = capitalize(WORD_1)
+  //     console.log(`capitalize(${WORD_1}), result: `, result)
+  //     expect(result)
 
-      .not.toBeString();
+  //     .not.toBeString();
     
-    })
+  //   })
 
-  })
+  // })
 
   describe('Capitalize function integer test,', () => {
 
