@@ -8,7 +8,9 @@
     "test": "jest --config=./src/jest.config.json",
     "verbose": "jest --config=./src/jest.config.json --verbose",
     "coverage": "jest --config=./src/jest.config.json --coverage",
-    "single": "node_modules/.bin/jest --config=./src/jest.config.json --verbose"
+    "watch": "jest --config=./src/jest.config.json --watch",
+    "watchAll": "jest --config=./src/jest.config.json --watchAll"
+
   },
   "author": "",
   "license": "MIT",
