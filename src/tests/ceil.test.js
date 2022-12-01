@@ -118,7 +118,7 @@ describe('Ceil function test 3, with minus decimals', ()=> {
     })
 
     it('add 999.9990 with minus two decimals, should return 1000', () => {
-        const result = ceil(999.9990, -2)
+        const result = ceil(999.9990,)
         console.log('ceil(999.9990), result: ', result);
         expect(result).toBe(1000)
         
