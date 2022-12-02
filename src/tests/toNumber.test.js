@@ -72,14 +72,32 @@ describe('toNumber function test 3 -Symbol, Object, Function', () => {
     })
 
     it('add Object, result should be NaN', () => {
-        const func = Function('foo');
+        const obj = {type: "food", value: Object};
+        const result = toNumber(obj)
+        console.log('toNumber(obj), result: ', result)
+        expect(toNumber(obj)).toBe(NaN)
+
+    })
+
+    it('add function, result should be NaN', () => {
+        const func = () => {
+            return true;
+        };
         const result = toNumber(func)
         console.log('toNumber(func), result: ', result)
         expect(toNumber(func)).toBe(NaN)
 
     })
 
-    it('add Object, result should be NaN', () => {
+    it('add Function, result should be NaN', () => {
+        const func = Function;
+        const result = toNumber(func)
+        console.log('toNumber(func), result: ', result)
+        expect(toNumber(func)).toBe(NaN)
+
+    })
+
+    it('add boolean, result should be NaN', () => {
         const t = true;
         const result = toNumber(t)
         console.log('toNumber(t), result: ', result)
@@ -87,12 +105,65 @@ describe('toNumber function test 3 -Symbol, Object, Function', () => {
 
     })
 
-    it('add Object, result should be NaN', () => {
-        const t = false;
-        const result = toNumber(t)
-        console.log('toNumber(t), result: ', result)
-        expect(toNumber(t)).toBe(0)
+    it('add Number, result should be NaN', () => {
+        const num = Number;
+        const result = toNumber(num)
+        console.log('toNumber(num), result: ', result)
+        expect(toNumber(num)).toBe(NaN)
+
+    })
+
+    it('add Array, result should be NaN', () => {
+        const array = [1, 2, 3];
+        const result = toNumber(array)
+        console.log('toNumber(array), result: ', result)
+        expect(toNumber(array)).toBe(NaN)
+
+    })
+
+    it('add null, result should be NaN', () => {
+        const empty = null;
+        const result = toNumber(empty)
+        console.log('toNumber(empty), result: ', result)
+        expect(toNumber(empty)).toBe(0)
+
+    })
+
+    it('add {}, result should be NaN', () => {
+        const empty = {};
+        const result = toNumber(empty)
+        console.log('toNumber(empty), result: ', result)
+        expect(toNumber(empty)).toBe(NaN)
+
+    })
+
+    it('add binary, result should be NaN', () => {
+        const bin = Number(42).toString(2);
+        const result = toNumber(bin)
+        console.log('toNumber(bin), result: ', result)
+        expect(toNumber(bin)).toBe(101010)
+
+    })
+
+    it('add binary, result should be NaN', () => {
+        const bin = "101010";
+        const result = toNumber(bin)
+        console.log('toNumber(bin), result: ', result)
+        expect(toNumber(bin)).toBe(101010)
 
     })
 
 })
+
+// * isObject({})
+// * // => true
+// *
+// * isObject([1, 2, 3])
+// * // => true
+// *
+// * isObject(Function)
+// * // => true
+// *
+// * isObject(null)
+// * // => false
+// */
