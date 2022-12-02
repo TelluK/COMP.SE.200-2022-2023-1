@@ -40,6 +40,93 @@ it('Drop from empty array [], should be [] ', () => {
 
 })
 
+it('Drop from empty array [] and undefined length, should be [] ', () => {
+ 
+    let array = []
+    let undef;
+    const result = drop(array, undef)
+    console.log('drop([]), result: ', result);
+    expect(drop(array)).toStrictEqual([])
+    .toBeArray()
+
+})
+
+it('Drop from array [1, 2, 3] and undefined length, should be [2, 3] ', () => {
+ 
+    let array = [1,2,3]
+    let undef;
+    const result = drop(array, undef)
+    console.log('drop([]), result: ', result);
+    expect(drop(array)).toStrictEqual([2, 3])
+    .toBeArray()
+
+})
+
+it('Drop from array [1, 2, 3] and n = -1, should be [2, 3] ', () => {
+ 
+    let array = [1,2,3]
+    const n = -1
+    const result = drop(array, n)
+    console.log('drop([]), result: ', result);
+    expect(drop(array, n)).toStrictEqual([1, 2, 3])
+    .toBeArray()
+
+})
+
+it('Drop from empty array [] and undefined length, should be [] ', () => {
+ 
+    let array = []
+    const result = drop(array, 3)
+    console.log('drop([]), result: ', result);
+    expect(drop(array, 3)).toStrictEqual([])
+    .toBeArray()
+
+})
+
+it('Drop from empty array [] and n = 0, should be [] ', () => {
+ 
+    let array = null;
+    const n = 0;
+    const result = drop(array, n)
+    console.log('drop([], 0), result: ', result);
+    expect(drop(array, n)).toStrictEqual([])
+    .toBeArray()
+
+})
+
+it('Drop from empty array [] and undefined length, should be [] ', () => {
+ 
+    let array = [1,2]
+    const result = drop(array, 3)
+    console.log('drop([]), result: ', result);
+    expect(drop(array, 3)).toStrictEqual([])
+    .toBeArray()
+
+})
+
+it('Drop from empty array [] and undefined length, should be [] ', () => {
+ 
+    let array = [1,2,3]
+    let undef;
+    const result = drop(array, undef)
+    console.log('drop([]), result: ', result);
+    expect(drop(array)).toStrictEqual([2, 3])
+    .toBeArray()
+
+})
+
+
+it('Drop from empty array [] and undefined length, should be [] ', () => {
+ 
+    let array = [1,2,3]
+    let undef;
+    const result = drop(array, undef)
+    console.log('drop([]), result: ', result);
+    expect(drop(array)).toStrictEqual([2, 3])
+    .toBeArray()
+
+})
+
 it('Drop from empty arrays [], [1,2,3], should be [] ', () => {
  
     const result = drop([])

@@ -1,8 +1,4 @@
 import difference from '../difference'
-import baseDifference from '../.internal/baseDifference.js'
-
-import isArrayLikeObject from '../isArrayLikeObject.js'
-import baseFlatten from '../.internal/baseFlatten.js'
 
 describe('Difference function test 1 ', () => {
     it('Creates an array of "array" values not included in the other given arrays -work with positive numbers', () => {
