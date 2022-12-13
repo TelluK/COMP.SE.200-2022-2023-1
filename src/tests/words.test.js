@@ -5,6 +5,15 @@ import asciiWords from '../words'
 
 describe('Words function test with arrays', () => {
     it('Should split string of words to an array', () => {
+        const result = words('carrot, potato, & milk')
+        const shouldBe = ['carrot', 'potato', 'milk']
+        expect(result).toStrictEqual(shouldBe)
+        .toBeArray()
+        .not.toBeNull()
+        
+    })
+
+    it('Should split string of words to an array', () => {
         const result = words('carrot, potato, & milk', /[^, ]+/g)
         const shouldBe = ['carrot', 'potato', '&', 'milk']
         expect(result).toStrictEqual(shouldBe)
