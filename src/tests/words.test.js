@@ -3,21 +3,10 @@ import unicodeWords from '../.internal/unicodeWords.js'
 import asciiWords from '../words'
 
 
-describe('Words function test 1', () => {
-    it('Should split string of words to an array', () => {
-        const result = words('carrot, potato, & milk')
-        const shouldBe = ['carrot', 'potato', 'milk']
-        console.log('words(carrot, potato, & milk, result: ', result)
-        expect(result).toStrictEqual(shouldBe)
-        .toBeArray()
-        .not.toBeNull()
-        
-    })
-
+describe('Words function test with arrays', () => {
     it('Should split string of words to an array', () => {
         const result = words('carrot, potato, & milk', /[^, ]+/g)
         const shouldBe = ['carrot', 'potato', '&', 'milk']
-        console.log('words(carrot, potato, & milk, result: ', result)
         expect(result).toStrictEqual(shouldBe)
         .toBeArray()
         .not.toBeNull()
@@ -27,7 +16,6 @@ describe('Words function test 1', () => {
     it('Should split string of words to an array with ascii pattern', () => {
         const string = "string";
         const result = words(string,asciiWords(string))
-        console.log('words(string, asciiWords(string)), result: ', result)
         expect(result).toStrictEqual(result)
         .toBeArray()
         .not.toBeNull()
@@ -40,7 +28,6 @@ describe('Words function test 1', () => {
           );
         const string = "string";
         const result = words(string,hasUnicodeWord(string))
-        console.log('words(string, hasUnicodeWords(string)), result: ', result)
         expect(result).toStrictEqual(result)
 
     })
@@ -49,7 +36,6 @@ describe('Words function test 1', () => {
 
         const string = "string";      
         const result = words(string,unicodeWords(string))
-        console.log('words(string, unicodeWords(string))), result: ', result)
         expect(result).toStrictEqual(result)
 
     })
@@ -58,16 +44,14 @@ describe('Words function test 1', () => {
         const pattern = undefined;
         const string = "string";      
         const result = words(string,pattern)
-        console.log('words(string,undefined), result: ', result)
         expect(result).not.toBeNull
 
     })
 
-    it('Should return empty array of words to an array with undefined pattern', () => {
+    it('Should return empty array of words to an array with empty pattern', () => {
         let pattern;
         const string = "string";      
         const result = words(string,pattern)
-        console.log('words(string,undefined), result: ', result)
         expect(result).not.toBeNull
 
     })
