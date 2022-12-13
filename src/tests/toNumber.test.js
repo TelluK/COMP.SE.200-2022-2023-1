@@ -113,4 +113,3 @@ describe("toNumber function test 3 -Symbol, Object, Function", () => {
     expect(result).toBe(101010);
   });
 });
-
